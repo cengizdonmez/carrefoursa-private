@@ -1,0 +1,38 @@
+.bulletin-form {
+  padding: 120px 0;
+
+  #form-bulletin {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  #input-bulletin {
+    height: 100%;
+    border: 1px solid #888;
+
+    &::placeholder {
+      font-weight: bold;
+      color: #1e2634;
+    }
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    .form-check-input {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 4px;
+      border: 1px solid #888;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bulletin-form {
+    padding: 80px 0;
+    #input-bulletin {
+      height: 3rem;
+    }
+  }
+}

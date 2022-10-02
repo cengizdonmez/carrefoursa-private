@@ -1,0 +1,78 @@
+.section-box-slider {
+  padding-top: 318px;
+  .section-title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: normal;
+    position: relative;
+  }
+  .swiper-wrapper {
+    padding-bottom: 80px;
+  }
+  .container {
+    position: relative;
+    padding: 38px 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -5%;
+      width: 150vw;
+      height: 100%;
+      background: $primary;
+      border-bottom-right-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    &::after {
+      content: url(/src/assets/images/dot-bg.png);
+      position: absolute;
+      right: -5%;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      display: table;
+    }
+
+    .swiper-slide {
+      aspect-ratio: 1/1;
+      height: auto;
+      background: #fff;
+      border-radius: 27px;
+      img {
+        object-fit: contain;
+      }
+    }
+    .award-card {
+      color: #fff;
+      h3 {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-align: center;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  .section-box-slider {
+    padding-top: 80px;
+    .container {
+      .award-card {
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .section-box-slider {
+    .container {
+      &::before {
+        border-radius: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}

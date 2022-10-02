@@ -1,0 +1,18 @@
+.section-partner {
+  padding: 90px 0;
+  border-top: dashed 1px $primary;
+  .content {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      max-width: 292px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .section-partner {
+    padding: 60px 0;
+  }
+}

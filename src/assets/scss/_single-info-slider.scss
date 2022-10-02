@@ -1,0 +1,84 @@
+.single-info-slider {
+  padding-top: 213px;
+  .container {
+    position: relative;
+    padding: 3rem 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -3rem;
+      width: 100vw;
+      height: 100%;
+      background: $primary;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+    &::after {
+      content: url(/src/assets/images/dot-bg.png);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: table;
+    }
+
+    .swiper-img {
+      border-radius: 28px;
+      min-height: 308px;
+    }
+    .content {
+      color: #fff;
+      padding-top: 2rem;
+      h2 {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        line-height: 35px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+  .swiper-controller {
+    position: absolute;
+    left: 38.5%;
+    bottom: 38px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .single-info-slider {
+    padding-top: 80px;
+    .swiper-controller {
+      position: initial;
+      margin-top: 1.5rem;
+    }
+    .container {
+      &::before {
+        left: -5%;
+        width: 110%;
+        border-radius: 50px;
+      }
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .single-info-slider {
+    .container {
+      &::before {
+        border-radius: 0;
+      }
+    }
+  }
+}

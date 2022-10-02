@@ -1,0 +1,89 @@
+.promotional-video-section {
+  padding-top: 170px;
+  h2 {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    margin-bottom: 2.25rem;
+  }
+
+  .content {
+    position: relative;
+    .bg-path {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &.path-1 {
+        left: -16%;
+      }
+      &.path-2 {
+        left: -20%;
+      }
+    }
+  }
+
+  .video-card {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .btn-video-effect {
+        background: rgba($primary, 1);
+      }
+    }
+    img {
+      border-radius: 28px;
+    }
+    .btn-video-effect {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: rgba($primary, 0.75);
+      border-radius: 50%;
+      border: 1px solid #fff;
+      transition: 300ms ease;
+
+      .fa-play {
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      &::before {
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        animation: play-button 2s ease-out infinite;
+        border: 1px solid #fff;
+        border-radius: 200%;
+        box-shadow: 0 0 5px #0000004d;
+        box-sizing: border-box;
+        content: "";
+      }
+    }
+
+    @keyframes play-button {
+      0% {
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .promotional-video-section {
+    padding-top: 80px;
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
